@@ -1,4 +1,4 @@
-/* Efectos de Fade-In y Escribir */
+/* Efectos de Fade-In */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -18,14 +18,13 @@
 
 /* Corazón flotante */
 .heart-floating {
-    position: absolute;
-    top: 50%; /* Alineado verticalmente */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra el corazón en la mitad de las imágenes */
-    font-size: 3em;
+    font-size: 2.5em;
     color: #ff69b4;
     animation: float 4s ease-in-out infinite;
     z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Estilos Generales */
@@ -38,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-y: hidden; /* Evita el desplazamiento vertical */
 }
 
 .container {
@@ -96,22 +96,69 @@ p {
         padding: 15px;
     }
     .heart-floating {
-        font-size: 2.5em;
+        font-size: 2em;
     }
 }
 
 /* Estilos para imágenes pequeñas */
 .imagenes-contenedor {
     display: flex;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    align-items: center; /* Alinea las imágenes verticalmente en el centro */
-    gap: 20px; /* Espacio entre las imágenes */
-    margin: 20px auto; /* Centra el contenedor en la página */
-    position: relative; /* Para posicionar el corazón centrado */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio inicial entre las imágenes */
+    margin: 20px auto;
+    position: relative;
 }
 
 /* Ajuste de tamaño de las imágenes */
 .imagen-pequena {
-    width: 150px; /* Ajusta el tamaño según lo necesario */
+    width: 150px;
     height: auto;
 }
+
+/* Confeti */
+@keyframes caerConfeti {
+    0% { 
+        transform: translateY(0) rotate(0deg); 
+        opacity: 1; 
+    }
+    70% { 
+        opacity: 1; 
+    }
+    100% { 
+        transform: translateY(300px) rotate(720deg); 
+        opacity: 0; 
+    }
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffd700; /* Amarillo */
+    animation: caerConfeti 5s linear infinite;
+    top: -10px; /* Empieza desde fuera del viewport */
+}
+
+.confetti:nth-child(1) { left: 10%; animation-delay: 1s; }
+.confetti:nth-child(2) { left: 20%; animation-delay: 1.5s; }
+.confetti:nth-child(3) { left: 30%; animation-delay: 2s; }
+.confetti:nth-child(4) { left: 40%; animation-delay: 2.5s; }
+.confetti:nth-child(5) { left: 50%; animation-delay: 3s; }
+.confetti:nth-child(6) { left: 60%; animation-delay: 3.5s; }
+.confetti:nth-child(7) { left: 70%; animation-delay: 4s; }
+.confetti:nth-child(8) { left: 80%; animation-delay: 4.5s; }
+.confetti:nth-child(9) { left: 90%; animation-delay: 5s; }
+
+.confetti:nth-child(odd) {
+    background-color: #ff69b4; /* Rosa */
+}
+.confetti:nth-child(even) {
+    background-color: #1e90ff; /* Azul */
+}
+
+/* Estilo específico para la página sorpresa */
+.imagenes-contenedor.surprise {
+    gap: 50px; /* Más espacio entre las imágenes */
+}
+
