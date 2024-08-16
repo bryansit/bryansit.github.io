@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Cumpleaños, Mi Amor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
     <div class="container">
         <div class="heart-floating">❤️</div>
         <h1 class="fade-in">¡Feliz Cumpleaños, Mi Orgullosita♥!</h1>
-        
+
         <div class="message typewriter">
             <p>Hoy celebramos el día en que el mundo se volvió <br>un lugar más hermoso porque tú naciste. 🎂</p>
-            <p>Eres mi sol, mi luna y todas mis estrellas. Te amo <br>más  de lo que las palabras pueden expresar. 🌟</p>
+            <p>Eres mi sol, mi luna y todas mis estrellas. Te amo <br>más de lo que las palabras pueden expresar. 🌟</p>
             <p>¡Espero que este día esté lleno de amor, alegría y <br>sorpresas!</p>
         </div>
-        
+
         <a href="bienvenida.html" class="btn">¡Haz clic para ver tu sorpresa!</a>
+
+        <!-- New Floating Envelope -->
+        <div class="envelope-container-second">
+            <div class="envelope-second" onclick="openSecondNote()">
+                ✉️
+            </div>
+            <div id="note-second" class="note-second">
+                <p>Tienes aquella sonrisa <br>preciosa, más brillante <br>que una estrella hermosa,<br>y unos ojos que
+                    al sol hacen <br>sombra, iluminando mi <br>vida de forma grandiosa.</p>
+
+            </div>
+        </div>
 
         <!-- Confetti -->
         <div class="confetti"></div>
@@ -31,5 +46,8 @@
         <div class="confetti"></div>
         <div class="confetti"></div>
     </div>
+
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>

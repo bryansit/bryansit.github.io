@@ -162,3 +162,108 @@ p {
     gap: 50px; /* Más espacio entre las imágenes */
 }
 
+/* Sobre flotante */
+.envelope-container {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: 3;
+}
+
+.envelope {
+    font-size: 3em;
+    animation: float 4s ease-in-out infinite;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+/* Nota oculta */
+.note {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.note p {
+    margin: 0;
+}
+/* New Floating Envelope */
+.envelope-container-second {
+    text-align: center;
+    margin-top: 20px; /* Space between the button and the envelope */
+}
+
+.envelope-second {
+    font-size: 3em;
+    animation: float 4s ease-in-out infinite;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+/* New Hidden Note */
+.note-second {
+    display: none;
+    margin-top: 10px; /* Space between the envelope and the note */
+    width: 250px;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.note-second p {
+    margin: 0;
+}
+/* New Floating Envelope */
+.envelope-container-top {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+}
+
+.envelope-top {
+    font-size: 3em;
+    animation: float 4s ease-in-out infinite;
+    cursor: pointer;
+    transform-origin: center;
+}
+
+/* New Hidden Note */
+.note-top {
+    display: none;
+    margin-top: 10px; /* Space between the envelope and the note */
+    width: 250px;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    position: absolute;
+    top: 60px; /* Adjust this value to control the distance below the envelope */
+    right: 0;
+}
+
+.note-top p {
+    margin: 0;
+}
