@@ -1,0 +1,117 @@
+/* Efectos de Fade-In y Escribir */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Efectos de Flotación */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Corazón flotante */
+.heart-floating {
+    position: absolute;
+    top: 50%; /* Alineado verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el corazón en la mitad de las imágenes */
+    font-size: 3em;
+    color: #ff69b4;
+    animation: float 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+/* Estilos Generales */
+body {
+    background: linear-gradient(135deg, #f3e6e8 0%, #fde1e6 50%, #fcc9d6 100%);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 600px;
+    margin: auto;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff69b4;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff1493;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background-color: #ff69b4;
+}
+
+/* Adaptaciones para Dispositivos Móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+    .container {
+        padding: 15px;
+    }
+    .heart-floating {
+        font-size: 2.5em;
+    }
+}
+
+/* Estilos para imágenes pequeñas */
+.imagenes-contenedor {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center; /* Alinea las imágenes verticalmente en el centro */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin: 20px auto; /* Centra el contenedor en la página */
+    position: relative; /* Para posicionar el corazón centrado */
+}
+
+/* Ajuste de tamaño de las imágenes */
+.imagen-pequena {
+    width: 150px; /* Ajusta el tamaño según lo necesario */
+    height: auto;
+}
