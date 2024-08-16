@@ -106,13 +106,13 @@ p {
     justify-content: center;
     align-items: center;
     gap: 20px; /* Espacio inicial entre las imágenes */
-    margin: 20px auto;
+    margin: 15px auto;
     position: relative;
 }
 
 /* Ajuste de tamaño de las imágenes */
 .imagen-pequena {
-    width: 150px;
+    width: 145px;
     height: auto;
 }
 
