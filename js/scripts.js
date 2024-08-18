@@ -3,7 +3,7 @@ function checkCredentials() {
     const password = document.getElementById('password').value;
     const messageElement = document.getElementById('message');
 
-    if (name === 'Andrea Quispe' && password === '2006') {
+    if (name === 'Andrea Quispe' ) {
         messageElement.classList.remove('error');
         messageElement.classList.add('success');
         messageElement.textContent = '¡Acceso concedido!';
