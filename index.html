@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Orgullosita♥</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
     <div class="container">
         <h1 class="fade-in">¡Feliz Cumpleaños!</h1>
-        <p class="fade-in" style="animation-delay: 1s;">Por favor, ingresa tu nombre y la contraseña para ver el mensaje especial.</p>
-        <div id="login-form" class="fade-in" style="animation-delay: 2s;">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" required><br><br>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" ><br><br>
-            <button class="btn" onclick="checkCredentials()">Ingresa, cumpleañera</button>
-            <p id="message" class="error"></p>
-        </div>
-        <p class="fade-in" style="animation-delay: 3s;">Hoy tu día especial mi pequeña Orgullosita♥,<br> recuerda tus ojitos siempre dicen todo sin expresar nada</p>
+        <p class="fade-in" style="animation-delay: 1s;">Hoy es tu día especial mi pequeña Orgullosita♥,<br> recuerda que tus ojitos siempre dicen todo sin expresar nada.</p>
+        <button class="btn fade-in" style="animation-delay: 2s;" onclick="goToSurprise()">Ingresa, cumpleañera</button>
     </div>
     <div class="envelope-container">
         <div class="envelope" onclick="openNote()">
             ✉️
         </div>
         <div id="note" class="note">
-            <p>Deberas ingresar : Andrea Quispe y 2006. ♥</p>
+            <p>¡Feliz Cumpleaños, Andrea Quispe! ¡Espero que tu día esté lleno de alegría y amor! ♥</p>
         </div>
     </div>
+    
+    
     
     <script src="js/scripts.js"></script>
 </body>
